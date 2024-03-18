@@ -1,0 +1,11 @@
+[Unit]
+Description=Reload ath10k_pci module to speed up Wifi
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/etc/systemd/system/reload_ath10k.sh
+
+[Install]
+WantedBy=default.target
